@@ -2,7 +2,7 @@ import java.util.Scanner;
 /*
 This class creates an interactive quiz
 
-CURRENT OBJECTIVE: Trying to shuffle the questions each time.
+CURRENT OBJECTIVE: Trying to shuffle the answers each time.
  */
 public class Quiz {
     public static void main(String[] args) {
