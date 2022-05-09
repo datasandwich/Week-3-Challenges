@@ -1,9 +1,8 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Locale;
 import java.util.Scanner;
 /*
 This class creates an interactive quiz
+
+CURRENT OBJECTIVE: Trying to shuffle the questions each time.
  */
 public class Quiz {
     public static void main(String[] args) {
