@@ -34,6 +34,7 @@ public class Quiz {
                         {q3,a3_w_1,a3_w_2,a3_c,a3_w_3}};
 
         int score = 0;
+        int i = 1;
         // Looping around the questions.
         for (String[] questionsAndAnswer : questionsAndAnswers) {
             boolean ans = false;
@@ -44,7 +45,7 @@ public class Quiz {
                 }
                 Scanner scan = new Scanner(System.in);
                 String answer = scan.nextLine();
-                if (answer.equals(questionsAndAnswer[1].toLowerCase())){
+                if (answer.equals(questionsAndAnswer[i].toLowerCase())){
                     System.out.println("Correct!");
                     score++;
                     ans = true;
@@ -55,6 +56,7 @@ public class Quiz {
                     ans = true;
                 }
             }
+            i++;
         }
         System.out.println("You scored "+score+" points!");
     }
