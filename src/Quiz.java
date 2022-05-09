@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Locale;
 import java.util.Scanner;
 /*
@@ -28,8 +30,8 @@ public class Quiz {
         // Storing the questions and answers in a 2-dimensional array.
         String[][] questionsAndAnswers =
                         {{q1,a1_c,a1_w_1,a1_w_2,a1_w_3},
-                        {q2,a2_c,a2_w_1,a2_w_2,a2_w_3},
-                        {q3,a3_c,a3_w_1,a3_w_2,a3_w_3}};
+                        {q2,a2_w_1,a2_c,a2_w_2,a2_w_3},
+                        {q3,a3_w_1,a3_w_2,a3_c,a3_w_3}};
 
         int score = 0;
         // Looping around the questions.
