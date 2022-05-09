@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 /*
 This class creates an interactive quiz
@@ -30,23 +31,29 @@ public class Quiz {
                         {q2,a2_c,a2_w_1,a2_w_2,a2_w_3},
                         {q3,a3_c,a3_w_1,a3_w_2,a3_w_3}};
 
+        int score = 0;
         // Looping around the questions.
         for (String[] questionsAndAnswer : questionsAndAnswers) {
-            boolean correct = false;
+            boolean ans = false;
             // Repeating the question until a correct answer is given.
-            while (!correct) {
+            while (!ans) {
                 for (String s : questionsAndAnswer) {
                     System.out.println(s);
                 }
                 Scanner scan = new Scanner(System.in);
                 String answer = scan.nextLine();
-                if (answer.equals(questionsAndAnswer[1])){
-                    System.out.println("correct");
-                    correct= true;
-                } else {
-                    System.out.println("Try again!");
+                if (answer.equals(questionsAndAnswer[1].toLowerCase())){
+                    System.out.println("Correct!");
+                    score++;
+                    ans = true;
+                } else if (answer.equals("")){
+                    System.out.println("You need to enter something!");
+                } else{
+                    System.out.println("Wrong");
+                    ans = true;
                 }
             }
         }
+        System.out.println("You scored "+score+" points!");
     }
 }
